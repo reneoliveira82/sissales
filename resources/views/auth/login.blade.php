@@ -7,8 +7,8 @@
     <!--<div class="card-header">{{ __('Acesse sua conta') }}</div>-->
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);">
         <div class="container">
-            <div class="navbar-brand row" style="font-size: 20px">
-                {{ __(' Sistema Gestão de Recadastramento ') }}
+            <div class="navbar-brand row" style="font-size: 19  px">
+                {{ __('Sistema de Inspeção de Chamados') }}
             </div>
 
             <!-- Right Side Of Navbar -->
@@ -16,9 +16,9 @@
                 <!--<li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>-->
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Criar de conta') }}</a>
-                </li> -->
+                </li>
             </ul>
         </div>
     </nav>

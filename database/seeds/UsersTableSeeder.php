@@ -12,22 +12,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert(
-            [
-                [
-                    'name' => 'Administrador',
-                    'email' => 'cti@saeb.ba.gov.br',
-                    'password' => bcrypt('123456'),
-                    'cpf' => '111.111.111-11',
-                    'matricula' => '111111111',
-                    'telefone' => '(71) 99261-2552',
-                    'id_sac_unidade' => '1',
-                    'ativo' => 'S',
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now(),
-                ],
-
-            ]   
-    );
+        DB::table('users')->insert([
+            'name' => 'Administrador',
+            'email' => 'suporte@saeb.ba.gov.br',
+            'password' => bcrypt('suporte'),
+            'cpf' => '111.111.111-11',
+            'matricula' => '111111111',
+            'funcao' => 'Administrador',
+            'telefone' => '(00) 00000-0000',
+            'ativo' => 'S',
+             'updated_at' => Carbon::now(),
+        ]);
     }
 }

@@ -59,7 +59,5 @@
 </div>
 
 <script>
-<script>
 
-</script>
 </script>

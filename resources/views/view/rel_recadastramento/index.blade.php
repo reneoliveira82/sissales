@@ -1,7 +1,6 @@
 @extends('layout.default')
-@section('titulo','Relatório de Inativos | Sistema Gestão de Recadastramento')
+@section('titulo','Relatório de recadastramento | Sistema Gestão de Recadastramento')
 @section('conteudo')
-
 <div class="page-content-wrapper">
 
 <div class="page-content">
@@ -19,7 +18,7 @@
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="icon-settings font-green"></i>
-                            <span class="caption-subject font-green bold uppercase">Lista de Relatório de Inativos</span>
+                            <span class="caption-subject font-green bold uppercase">Lista de Relatório de Recadastramento</span>
                         </div>
 
                     </div>
@@ -50,14 +49,14 @@
                         </div>
 
                         @can('create_user')
-                        <div class="row ">
+                        <!-- <div class="row ">
                             <div class="col-md-12 ">
                                 <div class="form-actions">
                                     <button type="button" class="btn blue" id="novo"> <i class="fa fa-plus"></i> Novo</button>
 
                                 </div>
                             </div>
-                        </div>                            
+                        </div>                             -->
                         @endcan
 
                     </div>
@@ -69,13 +68,12 @@
     </div>
 
 </div>
-
 <!-- Colocar scripts aqui-->
 <script type="text/javascript">
     //Carrega tabela com todas as secretariass
     $(document).ready(function() {
         $.ajax({
-            url: "{{ route('rel_inativos.tabela') }}",
+            url: "{{ route('rel_recadastramento.tabela') }}",
             type: 'GET',
             data: {},
             beforeSend: function() {

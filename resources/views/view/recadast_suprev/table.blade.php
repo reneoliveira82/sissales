@@ -1,7 +1,8 @@
 
+<table class="table table-striped table-bordered table-hover dt-responsive tabelaPT">
     <thead>
         <tr>
-            <th>Matricula</th>
+            <th>Matriclua</th>
             <th>Órgão</th>
             <th>Nome</th>
             <th>CPF</th>
@@ -15,31 +16,145 @@
     <tbody>
         @foreach($registros as $reg)
         <tr>
-            <td>{{$reg->matricula}}</td>
-            <td>{{$reg->orgao}}</td>
-            <td>{{$reg->nome}}</td>
-            <td>{{$reg->cpf}}</td>
-            <td>{{$reg->rg}}</td>
+            <td>12345678</td>
+            <td>MP</td>
+            <td>Fulano da Silva</td>
+            <td>000.111.222-33</td>
+            <td>00.111.222-00</td>
             <td>
-            @if ($reg->id_status == '1')
-                {!! " <span class='label label-sm ' style='background-color:#ffcc00;'> Em recadastramento </span> " !!} 
-                @elseif ($reg->id_status == '2')
-                {!! "<span class='label label-sm ' style='background-color:#30b319;'> Recadastrado </span>" !!}
-                @elseif ($reg->id_status == '3')
-                {!! "<span class='label label-sm ' style='background-color:#c0c0c0;'> Visita Domiciliar </span>" !!}
-                @elseif ($reg->id_status == '4')
-                {!! "<span class='label label-sm ' style='background-color:#f54f4f;'> Suspenso </span>" !!}
-                @elseif ($reg->id_status == '5')
-                {!! "<span class='label label-sm ' style='background-color:#4f90cc;'> Desligado </span>" !!}
-                @endif
+            
+                {!! " <span class='label label-sm ' style='background-color:#30b319;'>Recadastrado</span>" !!}
+    
             </td>
 
-            @if (Gate::check('edit_recad_suprev') || Gate::check('delete_recad_suprev'))
+            @if (Gate::check('edit__recad_suprev') || Gate::check('delete_recad_suprev'))
             <td>
                 <div class="actions">
                     @can('edit_recad_suprev')
-                    <a class="btn btn-sm green btn-outline tooltips" title="Recadastrar" onclick="editar({{$reg->id}});">
+                    <a class="btn btn-sm green btn-outline tooltips" title="Editar" onclick="editar();">
                         <i class="fa fa-edit"></i> </a>                        
+                    @endcan
+
+                    @can('delete_recad_suprev')
+                    <a class="btn btn-sm grey-salsa btn-outline tooltips" data-toggle="confirmation" data-funcao="excluir" data-id="{{ $reg->id }}" data-title="Deseja realmente excluir o registro?">
+                        <i class="fa fa-trash"></i> </a>                        
+                    @endcan
+                </div>
+            </td>
+            @endif
+
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>TJ</td>
+            <td>Beltrano da Silva</td>
+            <td>000.111.222-33</td>
+            <td>00.111.222-00</td>
+            <td>
+                 {!! " <span class='label label-sm ' style='background-color:#f54f4f;'>Desligado</span>" !!}
+              
+            </td>
+
+            @if (Gate::check('edit__recad_suprev') || Gate::check('delete_recad_suprev'))
+            <td>
+                <div class="actions">
+                    @can('edit_recad_suprev')
+                    <a class="btn btn-sm green btn-outline tooltips" title="Editar" onclick="editar();">
+                        <i class="fa fa-edit"></i> </a>                        
+                    @endcan
+
+                    @can('delete_recad_suprev')
+                    <a class="btn btn-sm grey-salsa btn-outline tooltips" data-toggle="confirmation" data-funcao="excluir" data-id="{{ $reg->id }}" data-title="Deseja realmente excluir o registro?">
+                        <i class="fa fa-trash"></i> </a>                        
+                    @endcan
+                </div>
+            </td>
+            @endif
+
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>SUPREV</td>
+            <td>Ciclano da Silva</td>
+            <td>000.111.222-33</td>
+            <td>00.111.222-00</td>
+            <td>
+      
+                {!! " <span class='label label-sm ' style='background-color:#ffbf00;'>Suspenso</span>" !!}
+
+            </td>
+
+            @if (Gate::check('edit__recad_suprev') || Gate::check('delete_recad_suprev'))
+            <td>
+                <div class="actions">
+                    @can('edit_recad_suprev')
+                    <a class="btn btn-sm green btn-outline tooltips" title="Editar" onclick="editar();">
+                        <i class="fa fa-edit"></i> </a>                        
+                    @endcan
+
+                    @can('delete_recad_suprev')
+                    <a class="btn btn-sm grey-salsa btn-outline tooltips" data-toggle="confirmation" data-funcao="excluir" data-id="{{ $reg->id }}" data-title="Deseja realmente excluir o registro?">
+                        <i class="fa fa-trash"></i> </a>                        
+                    @endcan
+                </div>
+            </td>
+            @endif
+
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>SUPREV</td>
+            <td>Delano da Silva</td>
+            <td>000.111.222-33</td>
+            <td>00.111.222-00</td>
+            <td>
+
+                {!! " <span class='label label-sm ' style='background-color:#00bfff;'>Visita Domiciliar</span>" !!}
+  
+            </td>
+
+            @if (Gate::check('edit__recad_suprev') || Gate::check('delete_recad_suprev'))
+            <td>
+                <div class="actions">
+                    @can('edit_recad_suprev')
+                    <a class="btn btn-sm green btn-outline tooltips" title="Editar" onclick="editar();">
+                        <i class="fa fa-edit"></i> </a>                        
+                    @endcan
+
+                    @can('delete_recad_suprev')
+                    <a class="btn btn-sm grey-salsa btn-outline tooltips" data-toggle="confirmation" data-funcao="excluir" data-id="{{ $reg->id }}" data-title="Deseja realmente excluir o registro?">
+                        <i class="fa fa-trash"></i> </a>                        
+                    @endcan
+                </div>
+            </td>
+            @endif
+
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>SUPREV</td>
+            <td>Delano da Silva</td>
+            <td>000.111.222-33</td>
+            <td>00.111.222-00</td>
+            <td>
+                @if ($reg->ativo == 'S')
+                {!! " <span class='label label-sm ' style='background-color:#30b319;'>Sim</span>" !!}
+                @else
+                 {!! " <span class='label label-sm ' style='background-color:#f54f4f;'>Não</span>" !!}
+                @endif
+            </td>
+
+            @if (Gate::check('edit__recad_suprev') || Gate::check('delete_recad_suprev'))
+            <td>
+                <div class="actions">
+                    @can('edit_recad_suprev')
+                    <a class="btn btn-sm green btn-outline tooltips" title="Editar" onclick="editar();">
+                        <i class="fa fa-edit"></i> </a>                        
+                    @endcan
+
+                    @can('delete_recad_suprev')
+                    <a class="btn btn-sm grey-salsa btn-outline tooltips" data-toggle="confirmation" data-funcao="excluir" data-id="{{ $reg->id }}" data-title="Deseja realmente excluir o registro?">
+                        <i class="fa fa-trash"></i> </a>                        
                     @endcan
                 </div>
             </td>
@@ -49,25 +164,6 @@
         @endforeach
         
     </tbody>
-
+</table>
 
 <script src="{{asset('metronic/modelo/tabelaAjax.js')}}" type="text/javascript"></script>
-
-
-<script>
-
-$("#data").html(table);
-$(document).ready( function () {
-    $('#tabela').DataTable({
-        
-        "bFilter": false,
-        "paging": false,
-        responsive: true,
-                        "language": {
-                            "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
-                        }
-    });
-
-    table.destroy();
-});
-</script>

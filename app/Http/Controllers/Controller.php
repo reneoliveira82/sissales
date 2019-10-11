@@ -142,7 +142,6 @@ class Controller extends BaseController
                 $texto = ($texto == null) ? 'Não foi possível completar a ação!' : $texto;
                 return '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>  <strong>Excessão: </strong> ' . $texto . ' </div>';
                 break;
-       
         }
     }
 

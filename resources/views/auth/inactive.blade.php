@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);">
         <div class="container">
             <div class="navbar-brand row" style="font-size: 20px">
-                {{ __('Gestão de Recadastramento') }}
+                {{ __('Carta de Serviço') }}
             </div>
 
             <!-- Right Side Of Navbar -->
@@ -34,7 +34,7 @@
 
         
             <div class="col-md-12 alert alert-warning" role="alert" style="text-align: justify">
-                No momento seu usuário não possui uma conta ativa. Aguarde a ativação ou entre em contato com o Administrador do Sistema.
+                No momento seu usuário não possui uma conta ativa. Aguarde a ativação ou entre em contato com o gestor da carta.
             </div>            
 
             <div class="row  mb-0" style="padding-top: 15px">

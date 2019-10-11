@@ -211,11 +211,11 @@ $('.start').each(
         var pathArray = window.location.pathname.split('/');
         //var newpage = pathArray[pathArray.length-1];
 
-        //Servidor
-        // var newpage = pathArray[pathArray, 2];
+        //Com a pasta "cartaservico"
+        var newpage = pathArray[pathArray, 2];
 
-        //Local
-        var newpage = pathArray[pathArray, 1];
+        //Sem a pasta "cartaservico"
+        // var newpage = pathArray[pathArray, 1];
 
         //opção com href 
         if (menupage === newpage) {

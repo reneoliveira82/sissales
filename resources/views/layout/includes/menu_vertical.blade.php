@@ -9,56 +9,41 @@
                     <span class="title">Principal</span>
                 </a>
             </li>
-            @canany (['view_recadastramento','edit_recadastramento'])
-            <li class="nav-item start ">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-list-alt"></i>
-                    <span class="title">Recadastramento</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">     
-                    <li class="nav-item ">
-                        <a href="{{ route('recad_suprev.index') }}" class="nav-link ">
-                            <span class="title"> Recadastramento </span>
-                        </a>
-                    </li>                                                            
-                    <li class="nav-item ">
-                        <a href="{{ route('rel_recadastramento.index')}}" class="nav-link ">
-                            <span class="title"> Alterar Situação </span>
-                        </a>
-                    </li>                        
-                </ul>
-            </li>
-            @endcanany
-            
-            @canany (['view_recadastramento','edit_recadastramento'])
-            
+
             <li class="nav-item start ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-list"></i>
                     <span class="title">Cadastros Básicos</span>
                     <span class="arrow"></span>
                 </a>
-                <ul class="sub-menu">     
+                <ul class="sub-menu">
+                   
                     <li class="nav-item ">
-                        <a href="{{ route('funcao.index') }}" class="nav-link ">
-                            <span class="title">Função</span>
+                        <a href="#" class="nav-link ">
+                            <span class="title">Registrar Chamado</span>
                         </a>
-                    </li>                                                            
+                    </li>                        
+                  
                     <li class="nav-item ">
-                        <a href="{{ route('sac_unidades.index')}}" class="nav-link ">
-                            <span class="title">Unidades SAC</span>
+                        <a href="{{ route('recad_suprev.index') }}" class="nav-link ">
+                            <span class="title"></span>
+                        </a>
+                    </li>                        
+                 
+                    
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link ">
+                            <span class="title">Em Desenvolvimento</span>
                         </a>
                     </li>                        
                 </ul>
             </li>
-            @endcanany
        
             @canany(['view_user','view_perfil_acesso'])             
             <li class="nav-item start">
                 <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-shield"></i>
-                    <span class="title">Segurança</span>
+                    <i class="icon-user"></i>
+                    <span class="title">Usuários</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu ">
@@ -70,6 +55,15 @@
                         </a>
                     </li>                        
                    @endcan
+                   
+                   @can('view_user')
+                    <li class="nav-item ">
+                        <a href="{{ route('usuario.aprovar.solicitacao.conta') }}" class="nav-link ">
+                            <span class="title">Usuários a Aprovar</span>
+                            <span class="badge" style="background-color: #578ebe" id="usuarios_aprovar"></span>
+                        </a>
+                    </li>                        
+                    @endcan
 
                     @can('view_perfil_acesso')
                     <li class="nav-item">
@@ -82,7 +76,7 @@
                 </ul>
             </li>
             @endcanany
-            @canany(['view_relatorio_recadastramento'])
+            
             <li class="nav-item start">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="fa fa-file-text-o"></i>
@@ -92,40 +86,33 @@
                 <ul class="sub-menu ">
         
                     <li class="nav-item ">
-                        <a href="{{ route('rel_recadastrados.index')}}" class="nav-link ">
-                            <span class="title">Recadastrados</span>
+                        <a href="" class="nav-link ">
+                            <span class="title">RECADASTRAMENTO</span>
                             <span class="badge" style="background-color: #3598dc" id="servico_cadastrado"></span>
                         </a>
                     </li>
-                    @can('view_relatorio_recadastramento')
                     <li class="nav-item ">
-                        <a href="{{ route('rel_em_recadastramento.index')}}" class="nav-link ">
-                            <span class="title">Em Recadastramento</span>
+                        <a href="{{ route('rel_recadastramento.index')}}" class="nav-link ">
+                            <span class="title">RELATÓRIO DE RECADASTRAMENTO</span>
                             <span class="badge" style="background-color: #3598dc" id="servico_cadastrado"></span>
                         </a>
                     </li>
-                    @endcan
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                            <span class="title">COMPROVANTE DE RECADASTRAMENTO</span>
+                            <span class="badge" style="background-color: #e7505a" id="servico_finalizados"></span>
+                        </a>
+                    </li>  
+
                     <li class="nav-item">
                         <a href="{{ route('rel_inativos.index')}}" class="nav-link ">
-                            <span class="title">Desligados</span>
+                            <span class="title">INATIVOS</span>
                             <span class="badge" style="background-color: #e7505a" id="servico_finalizados"></span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('rel_visita.index')}}" class="nav-link ">
-                            <span class="title">Visita Domiciliar</span>
-                            <span class="badge" style="background-color: #e7505a" id="servico_finalizados"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('rel_suspenso.index')}}" class="nav-link ">
-                            <span class="title">Suspensos</span>
-                            <span class="badge" style="background-color: #e7505a" id="servico_finalizados"></span>
-                        </a>
-                    </li>                   
+                    </li>             
                 </ul>
             </li>
-            @endcanany
 
             <li class="nav-item start">
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link">

@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Recadastramento;
 
-
-class InativosController extends Controller
+class RelatorioRecadastramentoController extends Controller
 {
-    protected $pag = 'rel_inativos';
+    protected $pag = 'rel_recadastramento';
     protected $model;
  
 
@@ -46,5 +45,3 @@ class InativosController extends Controller
         return view("view.$this->pag.table", compact('registros'));
     }
 }
-
-

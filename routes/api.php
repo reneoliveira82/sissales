@@ -17,6 +17,6 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-// $this->group(['namespace' => 'Api'/*, 'middleware' => 'auth:api'*/], function () {
-//     $this->apiResource('categorias', 'CategoriaApiController');
-// });
+$this->group(['namespace' => 'Api'/*, 'middleware' => 'auth:api'*/], function () {
+    $this->apiResource('categorias', 'CategoriaApiController');
+});

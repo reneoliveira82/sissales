@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Sistema Gestão de Recadastramento'),
+    'name' => env('APP_NAME', 'Carta de Serviço'),
 
     /*
     |--------------------------------------------------------------------------
