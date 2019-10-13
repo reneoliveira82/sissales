@@ -17,7 +17,7 @@
                 <div class="portlet light bordered">
                     <div class="portlet-title">
                         <div class="caption font-dark">
-                            <span class="caption-subject bold uppercase">Sistema Gestão de Recadastramento</span>
+                            <span class="caption-subject bold uppercase">Sistema Vendas</span>
                         </div>
 
                     </div>
@@ -40,35 +40,35 @@
                                                     </div>
                                                     <div class="details">
                                                         <div class="number">
-                                                            <span data-counter="counterup" data-value="">4.500</span>
+                                                            <span data-counter="counterup" data-value=""> Vendas </span>
                                                         </div>
-                                                        <div class="desc"> Recadastrados SUPREV </div>
+                                                        <div class="desc"> Inicie uma venda </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <a class="dashboard-stat dashboard-stat-v2 red" href="#">
+                                                <a class="dashboard-stat dashboard-stat-v2 red" href="{{ route('produtos.index') }}">
                                                     <div class="visual">
-                                                        <i class="fa fa-bar-chart-o"></i>
+                                                        <i class="fa fa-comments"></i>
                                                     </div>
                                                     <div class="details">
                                                         <div class="number">
-                                                            <span data-counter="counterup" data-value="">30</span></div>
-                                                        <div class="desc"> Suspensos SUPREV </div>
+                                                            <span data-counter="counterup" data-value="">Cadastrar Produtos </span></div>
+                                                        <div class="desc"> Produtos </div>
                                                     </div>
                                                 </a>
                                             </div>
                                             
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <a class="dashboard-stat dashboard-stat-v2 green" href="#">
+                                                <a class="dashboard-stat dashboard-stat-v2 green" href="{{ route('cliente.index')}}">
                                                     <div class="visual">
                                                         <i class="fa fa-shopping-cart"></i>
                                                     </div>
                                                     <div class="details">
                                                         <div class="number">
-                                                            <span data-counter="counterup" data-value="">5.068</span>
+                                                            <span data-counter="counterup" data-value=""> Cadastrar Clientes </span>
                                                         </div>
-                                                        <div class="desc"> Em recadastramento</div>
+                                                        <div class="desc"> Clientes </div>
                                                     </div>                                    
                                                 </a>
                                             </div>
@@ -79,8 +79,8 @@
                                                     </div>
                                                     <div class="details">
                                                         <div class="number">
-                                                            <span data-counter="counterup" data-value=""></span>15</div>
-                                                        <div class="desc"> Visitas Domiciliar </div>
+                                                            <span data-counter="counterup" data-value=""></span> Em desenvolvimento </div>
+                                                        <div class="desc"> Em desenvolvimento </div>
 
                                                     </div>
 

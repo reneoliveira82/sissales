@@ -17,7 +17,7 @@
 
         <!-- BEGIN PAGE TOP -->
         <div class="page-top pull-left">
-            <h3 class="text-center">Sistema Gestão de Recadastramento</h3>
+            <h3 class="text-center">Sistema de Vendas</h3>
         </div>
         <div class="page-top pull-right">
             

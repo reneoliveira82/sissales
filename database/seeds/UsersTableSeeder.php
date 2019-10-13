@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
                     'cpf' => '111.111.111-11',
                     'matricula' => '111111111',
                     'telefone' => '(71) 99261-2552',
-                    'id_sac_unidade' => '1',
+                    'id_sac_unidade'=> '1',
                     'ativo' => 'S',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),

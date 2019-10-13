@@ -111,21 +111,28 @@ $this->group(['namespace' => 'Controller', 'middleware' => 'auth'], function () 
     Route::get('rel_visita/tabela',['as'=>'rel_visita.tabela', 'uses'=> 'RelatorioVisitaController@tabelaAjax']);
     Route::get('pesquisar/rel_visita/tabela', ['as' => 'pesquisar.rel_visita.tabela', 'uses' => 'RelatorioVisitaController@buscaVisita']);
     
-    //Cadastro de Funções
-    Route::get('funcao', ['as' => 'funcao.index', 'uses' => 'FuncaoController@index']);
-    Route::get('funcao/tabela', ['as' => 'funcao.tabela', 'uses' => 'FuncaoController@tabelaAjax']);
-    Route::post('funcao/insert', ['as' => 'funcao.insert', 'uses' => 'FuncaoController@insert']);
-    Route::put('funcao/update/{id}', ['as' => 'funcao.update', 'uses' => 'FuncaoController@update']);
-    Route::post('funcao/delete/{id}', ['as' => 'funcao.delete', 'uses' => 'FuncaoController@delete']);
+    
+    //Produtos
+    Route::get('produtos', ['as' => 'produtos.index', 'uses' => 'ProdutoController@index']);
+    Route::get('produtos/tabela', ['as' => 'produtos.tabela', 'uses' => 'ProdutoController@tabelaAjax']);
+    Route::get('cad_produto/{id?}', ['as' => 'cad_produto.cad', 'uses' => 'ProdutoController@cadastrar']);
+    Route::post('cad_produto/insert', ['as' => 'produtos.insert', 'uses' => 'ProdutoController@insertProdutos']);
+    Route::put('cad_produto/update/{id}', ['as' => 'produtos.update', 'uses' => 'ProdutoController@alterarProdutos']);
+    Route::get('cad_produto/delete/{id}', ['as' => 'cad_produto.delete', 'uses' => 'ProdutoController@delete']); 
 
-    //Sac Unidades
-    Route::get('sac_unidade', ['as' => 'sac_unidades.index', 'uses' => 'Sac_unidadeController@index']);
-    Route::get('sac_unidade/tabela', ['as' => 'sac_unidades.tabela', 'uses' => 'Sac_unidadeController@tabelaAjax']);
-    Route::get('cad_unidade_sac/{id?}', ['as' => 'cad_unidade_sac.cad', 'uses' => 'Sac_unidadeController@cadastrar']);
-    Route::post('cad_unidade_sac/insert', ['as' => 'sac_unidades.insert', 'uses' => 'Sac_unidadeController@insertUnidadeSac']);
-    Route::put('cad_unidade_sac/update/{id}', ['as' => 'sac_unidades.update', 'uses' => 'Sac_unidadeController@alterarUnidadeSac']);
-    Route::get('cad_unidade_sac/delete/{id}', ['as' => 'cad_unidade_sac.delete', 'uses' => 'Sac_unidadeController@delete']); 
-   
+    
+    //Clientes
+    Route::get('cliente', ['as' => 'cliente.index', 'uses' => 'ClienteController@index']);
+    Route::get('cliente/tabela', ['as' => 'cliente.tabela', 'uses' => 'ClienteController@tabelaAjax']);
+    Route::get('cad_cliente/{id?}', ['as' => 'cad_cliente.cad', 'uses' => 'ClienteController@cadastrar']);
+    Route::post('cad_cliente/insert', ['as' => 'cliente.insert', 'uses' => 'ClienteController@insertCliente']);
+    Route::put('cad_cliente/update/{id}', ['as' => 'cliente.update', 'uses' => 'ClienteController@alterarCliente']);
+    Route::get('cad_cliente/delete/{id}', ['as' => 'cad_cliente.delete', 'uses' => 'ClienteController@delete']); 
+
+    //Vendas
+     Route::get('vendas', ['as' => 'vendas.index', 'uses' => 'VendasController@index']);
+     Route::get('vendas/tabela', ['as' => 'vendas.tabela', 'uses' => 'VendasController@tabelaAjax']);
+ 
 });
 
 Auth::routes();
