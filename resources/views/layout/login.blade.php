@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Sistema Gestão de Recadastramento') }}</title>
+    <title>{{ config('app.name', 'Sistema Vendas') }}</title>
 
     <!-- Scripts -->
     <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
