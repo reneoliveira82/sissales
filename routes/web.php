@@ -74,7 +74,39 @@ $this->group(['namespace' => 'Controller', 'middleware' => 'auth'], function () 
     //Relatório de inativos
     Route::get('rel_inativos',['as'=>'rel_inativos.index', 'uses'=> 'InativosController@index']);
     Route::get('rel_inativos/tabela', ['as' => 'rel_inativos.tabela', 'uses' => 'InativosController@tabelaAjax']);
+<<<<<<< HEAD
    
+=======
+    Route::get('pesquisar/rel_inativos/tabela', ['as' => 'pesquisar.rel_inativos.tabela', 'uses' => 'InativosController@buscaInativos']);
+
+    //Relatório de visita domiciliar
+    Route::get('rel_visita',['as'=>'rel_visita.index', 'uses'=> 'RelatorioVisitaController@index']);
+    Route::get('rel_visita/tabela',['as'=>'rel_visita.tabela', 'uses'=> 'RelatorioVisitaController@tabelaAjax']);
+    Route::get('pesquisar/rel_visita/tabela', ['as' => 'pesquisar.rel_visita.tabela', 'uses' => 'RelatorioVisitaController@buscaVisita']);
+    
+    
+    //Produtos
+    Route::get('produtos', ['as' => 'produtos.index', 'uses' => 'ProdutoController@index']);
+    Route::get('produtos/tabela', ['as' => 'produtos.tabela', 'uses' => 'ProdutoController@tabelaAjax']);
+    Route::get('cad_produto/{id?}', ['as' => 'cad_produto.cad', 'uses' => 'ProdutoController@cadastrar']);
+    Route::post('cad_produto/insert', ['as' => 'produtos.insert', 'uses' => 'ProdutoController@insertProdutos']);
+    Route::put('cad_produto/update/{id}', ['as' => 'produtos.update', 'uses' => 'ProdutoController@alterarProdutos']);
+    Route::get('cad_produto/delete/{id}', ['as' => 'cad_produto.delete', 'uses' => 'ProdutoController@delete']); 
+
+    
+    //Clientes
+    Route::get('cliente', ['as' => 'cliente.index', 'uses' => 'ClienteController@index']);
+    Route::get('cliente/tabela', ['as' => 'cliente.tabela', 'uses' => 'ClienteController@tabelaAjax']);
+    Route::get('cad_cliente/{id?}', ['as' => 'cad_cliente.cad', 'uses' => 'ClienteController@cadastrar']);
+    Route::post('cad_cliente/insert', ['as' => 'cliente.insert', 'uses' => 'ClienteController@insertCliente']);
+    Route::put('cad_cliente/update/{id}', ['as' => 'cliente.update', 'uses' => 'ClienteController@alterarCliente']);
+    Route::get('cad_cliente/delete/{id}', ['as' => 'cad_cliente.delete', 'uses' => 'ClienteController@delete']); 
+
+    //Vendas
+     Route::get('vendas', ['as' => 'vendas.index', 'uses' => 'VendasController@index']);
+     Route::get('vendas/tabela', ['as' => 'vendas.tabela', 'uses' => 'VendasController@tabelaAjax']);
+ 
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
 });
 
 Auth::routes();

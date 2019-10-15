@@ -403,6 +403,12 @@ class ComposerStaticInit7478e6722d9f32007f245b4ba4ea5a08
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+<<<<<<< HEAD
+=======
+        'App\\Http\\Controllers\\Controller\\ContatoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/ContatoController.php',
+        'App\\Http\\Controllers\\Controller\\EnderecoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/EnderecoController.php',
+        'App\\Http\\Controllers\\Controller\\FuncaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/FuncaoController.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
         'App\\Http\\Controllers\\Controller\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/HomeController.php',
         'App\\Http\\Controllers\\Controller\\InativosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/InativosController.php',
         'App\\Http\\Controllers\\Controller\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/LoginController.php',
@@ -410,10 +416,23 @@ class ComposerStaticInit7478e6722d9f32007f245b4ba4ea5a08
         'App\\Http\\Controllers\\Controller\\PerfilPermissaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/PerfilPermissaoController.php',
         'App\\Http\\Controllers\\Controller\\PerfilUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/PerfilUserController.php',
         'App\\Http\\Controllers\\Controller\\PermissaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/PermissaoController.php',
+<<<<<<< HEAD
         'App\\Http\\Controllers\\Controller\\RecadastramentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RecadastramentoController.php',
         'App\\Http\\Controllers\\Controller\\RelatorioRecadastramentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RelatorioRecadastramentoController.php',
+=======
+        'App\\Http\\Controllers\\Controller\\ProdutoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/ProdutoController.php',
+        'App\\Http\\Controllers\\Controller\\RecadastradoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RecadastradoController.php',
+        'App\\Http\\Controllers\\Controller\\RecadastramentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RecadastramentoController.php',
+        'App\\Http\\Controllers\\Controller\\RelEmRecadastramentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RelEmRecadastramentoController.php',
+        'App\\Http\\Controllers\\Controller\\RelSuspensoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RelSuspensoController.php',
+        'App\\Http\\Controllers\\Controller\\RelatorioVisitaController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/RelatorioVisitaController.php',
+        'App\\Http\\Controllers\\Controller\\Sac_unidadeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/Sac_unidadeController.php',
+        'App\\Http\\Controllers\\Controller\\ServidorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/ServidorController.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
         'App\\Http\\Controllers\\Controller\\SituacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/SituacaoController.php',
+        'App\\Http\\Controllers\\Controller\\SituacaoRecadastramentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/SituacaoRecadastramentoController.php',
         'App\\Http\\Controllers\\Controller\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/UserController.php',
+        'App\\Http\\Controllers\\Controller\\VendasController' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller/VendasController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -427,14 +446,21 @@ class ComposerStaticInit7478e6722d9f32007f245b4ba4ea5a08
         'App\\Models\\PerfilPermissao' => __DIR__ . '/../..' . '/app/Models/PerfilPermissao.php',
         'App\\Models\\PerfilUser' => __DIR__ . '/../..' . '/app/Models/PerfilUser.php',
         'App\\Models\\Permissao' => __DIR__ . '/../..' . '/app/Models/Permissao.php',
+        'App\\Models\\Produtos' => __DIR__ . '/../..' . '/app/Models/Produtos.php',
         'App\\Models\\Recadastramento' => __DIR__ . '/../..' . '/app/Models/Recadastramento.php',
         'App\\Models\\Responsavel' => __DIR__ . '/../..' . '/app/Models/Responsavel.php',
         'App\\Models\\Servico' => __DIR__ . '/../..' . '/app/Models/Servico.php',
         'App\\Models\\Situacao' => __DIR__ . '/../..' . '/app/Models/Situacao.php',
+<<<<<<< HEAD
         'App\\Models\\Tipo_unidade' => __DIR__ . '/../..' . '/app/Models/Tipo_unidade.php',
         'App\\Models\\Tipo_usuario' => __DIR__ . '/../..' . '/app/Models/Tipo_usuario.php',
         'App\\Models\\Unidade' => __DIR__ . '/../..' . '/app/Models/Unidade.php',
         'App\\Models\\incidente' => __DIR__ . '/../..' . '/app/Models/incidente.php',
+=======
+        'App\\Models\\Statu' => __DIR__ . '/../..' . '/app/Models/Statu.php',
+        'App\\Models\\TipoLogradouro' => __DIR__ . '/../..' . '/app/Models/TipoLogradouro.php',
+        'App\\Models\\Vendas' => __DIR__ . '/../..' . '/app/Models/Vendas.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
         'App\\Notifications\\ResetPassword' => __DIR__ . '/../..' . '/app/Notifications/ResetPassword.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

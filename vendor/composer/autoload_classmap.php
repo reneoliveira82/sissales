@@ -14,6 +14,12 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+<<<<<<< HEAD
+=======
+    'App\\Http\\Controllers\\Controller\\ContatoController' => $baseDir . '/app/Http/Controllers/Controller/ContatoController.php',
+    'App\\Http\\Controllers\\Controller\\EnderecoController' => $baseDir . '/app/Http/Controllers/Controller/EnderecoController.php',
+    'App\\Http\\Controllers\\Controller\\FuncaoController' => $baseDir . '/app/Http/Controllers/Controller/FuncaoController.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
     'App\\Http\\Controllers\\Controller\\HomeController' => $baseDir . '/app/Http/Controllers/Controller/HomeController.php',
     'App\\Http\\Controllers\\Controller\\InativosController' => $baseDir . '/app/Http/Controllers/Controller/InativosController.php',
     'App\\Http\\Controllers\\Controller\\LoginController' => $baseDir . '/app/Http/Controllers/Controller/LoginController.php',
@@ -21,10 +27,23 @@ return array(
     'App\\Http\\Controllers\\Controller\\PerfilPermissaoController' => $baseDir . '/app/Http/Controllers/Controller/PerfilPermissaoController.php',
     'App\\Http\\Controllers\\Controller\\PerfilUserController' => $baseDir . '/app/Http/Controllers/Controller/PerfilUserController.php',
     'App\\Http\\Controllers\\Controller\\PermissaoController' => $baseDir . '/app/Http/Controllers/Controller/PermissaoController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\Controller\\RecadastramentoController' => $baseDir . '/app/Http/Controllers/Controller/RecadastramentoController.php',
     'App\\Http\\Controllers\\Controller\\RelatorioRecadastramentoController' => $baseDir . '/app/Http/Controllers/Controller/RelatorioRecadastramentoController.php',
+=======
+    'App\\Http\\Controllers\\Controller\\ProdutoController' => $baseDir . '/app/Http/Controllers/Controller/ProdutoController.php',
+    'App\\Http\\Controllers\\Controller\\RecadastradoController' => $baseDir . '/app/Http/Controllers/Controller/RecadastradoController.php',
+    'App\\Http\\Controllers\\Controller\\RecadastramentoController' => $baseDir . '/app/Http/Controllers/Controller/RecadastramentoController.php',
+    'App\\Http\\Controllers\\Controller\\RelEmRecadastramentoController' => $baseDir . '/app/Http/Controllers/Controller/RelEmRecadastramentoController.php',
+    'App\\Http\\Controllers\\Controller\\RelSuspensoController' => $baseDir . '/app/Http/Controllers/Controller/RelSuspensoController.php',
+    'App\\Http\\Controllers\\Controller\\RelatorioVisitaController' => $baseDir . '/app/Http/Controllers/Controller/RelatorioVisitaController.php',
+    'App\\Http\\Controllers\\Controller\\Sac_unidadeController' => $baseDir . '/app/Http/Controllers/Controller/Sac_unidadeController.php',
+    'App\\Http\\Controllers\\Controller\\ServidorController' => $baseDir . '/app/Http/Controllers/Controller/ServidorController.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
     'App\\Http\\Controllers\\Controller\\SituacaoController' => $baseDir . '/app/Http/Controllers/Controller/SituacaoController.php',
+    'App\\Http\\Controllers\\Controller\\SituacaoRecadastramentoController' => $baseDir . '/app/Http/Controllers/Controller/SituacaoRecadastramentoController.php',
     'App\\Http\\Controllers\\Controller\\UserController' => $baseDir . '/app/Http/Controllers/Controller/UserController.php',
+    'App\\Http\\Controllers\\Controller\\VendasController' => $baseDir . '/app/Http/Controllers/Controller/VendasController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -38,14 +57,21 @@ return array(
     'App\\Models\\PerfilPermissao' => $baseDir . '/app/Models/PerfilPermissao.php',
     'App\\Models\\PerfilUser' => $baseDir . '/app/Models/PerfilUser.php',
     'App\\Models\\Permissao' => $baseDir . '/app/Models/Permissao.php',
+    'App\\Models\\Produtos' => $baseDir . '/app/Models/Produtos.php',
     'App\\Models\\Recadastramento' => $baseDir . '/app/Models/Recadastramento.php',
     'App\\Models\\Responsavel' => $baseDir . '/app/Models/Responsavel.php',
     'App\\Models\\Servico' => $baseDir . '/app/Models/Servico.php',
     'App\\Models\\Situacao' => $baseDir . '/app/Models/Situacao.php',
+<<<<<<< HEAD
     'App\\Models\\Tipo_unidade' => $baseDir . '/app/Models/Tipo_unidade.php',
     'App\\Models\\Tipo_usuario' => $baseDir . '/app/Models/Tipo_usuario.php',
     'App\\Models\\Unidade' => $baseDir . '/app/Models/Unidade.php',
     'App\\Models\\incidente' => $baseDir . '/app/Models/incidente.php',
+=======
+    'App\\Models\\Statu' => $baseDir . '/app/Models/Statu.php',
+    'App\\Models\\TipoLogradouro' => $baseDir . '/app/Models/TipoLogradouro.php',
+    'App\\Models\\Vendas' => $baseDir . '/app/Models/Vendas.php',
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
     'App\\Notifications\\ResetPassword' => $baseDir . '/app/Notifications/ResetPassword.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

@@ -1,8 +1,6 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
-
 class SacUnidadeTableSeeder extends Seeder
 {
     /**
@@ -20,7 +18,6 @@ class SacUnidadeTableSeeder extends Seeder
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
-
             ]   
     );
     }

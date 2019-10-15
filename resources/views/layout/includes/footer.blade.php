@@ -1,7 +1,7 @@
 </div>
 
 <div class="page-footer-fixed text-center" style="background-color: white; padding-top: 20px; padding-bottom: 20px;">
-    <div class="page-footer-inner"> {{date('Y')}} © SUPREV - Secretaria da Administração do Estado da Bahia (SAEB)
+    <div class="page-footer-inner"> {{date('Y')}} © Sissales - Sistema de Vendas
         {{-- <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
         <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a> --}}
     </div>

@@ -17,7 +17,11 @@
 
         <!-- BEGIN PAGE TOP -->
         <div class="page-top pull-left">
+<<<<<<< HEAD
             <h3 class="text-center">Sistema de Inspeção de Chamados</h3>
+=======
+            <h3 class="text-center">Sistema de Vendas</h3>
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
         </div>
         <div class="page-top pull-right">
             

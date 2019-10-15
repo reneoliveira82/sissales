@@ -12,8 +12,13 @@
 
             <li class="nav-item start ">
                 <a href="javascript:;" class="nav-link nav-toggle">
+<<<<<<< HEAD
                     <i class="icon-list"></i>
                     <span class="title">Cadastros Básicos</span>
+=======
+                    <i class="fa fa-list-alt"></i>
+                    <span class="title">Vendas</span>
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -22,6 +27,7 @@
                         <a href="#" class="nav-link ">
                             <span class="title">Registrar Chamado</span>
                         </a>
+<<<<<<< HEAD
                     </li>                        
                   
                     <li class="nav-item ">
@@ -34,8 +40,38 @@
                     <li class="nav-item ">
                         <a href="#" class="nav-link ">
                             <span class="title">Em Desenvolvimento</span>
+=======
+                    </li>  
+
+                     <li class="nav-item ">
+                        <a href="{{ route('vendas.index')}}" class="nav-link ">
+                            <span class="title"> Vendas </span>
                         </a>
-                    </li>                        
+                    </li>                       
+                </ul>
+            </li>
+            @endcanany
+            
+            @canany (['view_recadastramento','edit_recadastramento'])
+            
+            <li class="nav-item start ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-list"></i>
+                    <span class="title">Cadastros Básicos</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">                                                                
+                    <li class="nav-item ">
+                        <a href="{{ route('produtos.index')}}" class="nav-link ">
+                            <span class="title">Produtos</span>
+                        </a>
+                    </li>      
+                    <li class="nav-item ">
+                        <a href="{{ route('cliente.index')}}" class="nav-link ">
+                            <span class="title">Clientes</span>
+>>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
+                        </a>
+                    </li>                    
                 </ul>
             </li>
        
