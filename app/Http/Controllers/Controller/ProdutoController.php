@@ -102,4 +102,21 @@ class ProdutoController extends Controller
     public function deleteProduto(){
 
     }
+
+    public function buscarProdutos (Request $req){
+  
+        $cod_produto = $req->rec_codigo_prods;
+        $nome_produto = $req->rec_nome_prods ;
+        if(isset($cod_produto) && !empty($cod_produto)  ){
+            $registros =   $this->model::where('cod_produto', $cod_produto)->get();
+        }else
+        if(isset($nome_produto) && !empty($nome_produto)){
+            $registros =   $this->model::where('nome_produto', $nome_produto)->get();
+        }else
+        if(isset($cod_produto) && !empty($cod_produto) && isset($nome_produto) && !empty($nome_produto)  ){
+            $registros =   $this->model::where('cod_produto', $cod_produto)->orwhere('nome_produto', $nome_produto)->get();
+        }
+      
+        return view("view.vendas.produtos.table", compact('registros'));
+    }
 }

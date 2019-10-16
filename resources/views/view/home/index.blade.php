@@ -17,11 +17,7 @@
                 <div class="portlet light bordered">
                     <div class="portlet-title">
                         <div class="caption font-dark">
-<<<<<<< HEAD
-                            <span class="caption-subject bold uppercase">Sistema Inspeção de Chamados</span>
-=======
                             <span class="caption-subject bold uppercase">Sistema Vendas</span>
->>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
                         </div>
 
                     </div>
@@ -31,16 +27,14 @@
                         $nome = $nome_completo[0];
                         @endphp                         -->
                         <i class="fa fa-thumbs-o-up fa-2x"></i> Bem Vindo, {{ $nome }}!<br>
-                        {{-- <br>Para começar, escolha uma das opções ao lado. --}}
+                        {{-- <br>Para começar, escolha uma das opções ao lado. --}}<br>
 
                     </div>
-<<<<<<< HEAD
-=======
                     <div>
                        
                     <div class="row">
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <a class="dashboard-stat dashboard-stat-v2 blue" href="#">
+                                                <a class="dashboard-stat dashboard-stat-v2 blue" href="{{ route('vendas.index')}}">
                                                     <div class="visual">
                                                         <i class="fa fa-comments"></i>
                                                     </div>
@@ -87,8 +81,14 @@
                                                         <div class="number">
                                                             <span data-counter="counterup" data-value=""></span> Em desenvolvimento </div>
                                                         <div class="desc"> Em desenvolvimento </div>
->>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
 
+                                                    </div>
+
+                                                </a>
+                                            </div><!-- Fim do Col -->
+
+                                        </div><!-- Fim do Row -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
 </div>
 
 <script>
-   
+    
 </script>
 
 @endsection()

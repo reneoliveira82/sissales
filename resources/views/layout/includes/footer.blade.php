@@ -79,7 +79,7 @@
 <script src="{{asset('metronic/assets/layouts/global/scripts/quick-nav.min.js')}}" type="text/javascript"></script>
 
 <!-- END THEME LAYOUT SCRIPTS -->
-
+<script src="../assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
 
 <script src="{{asset('metronic/modelo/modelo.js')}}" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC_AAMlFDsMEMCYVr6yv-zKyfzOkV8k2Nc"></script>
@@ -92,10 +92,6 @@
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
 </form>
-
-<script>
-
-</script>
 </body>
 
 </html>

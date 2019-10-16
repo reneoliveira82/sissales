@@ -57,7 +57,26 @@
 
                         <table id="tabela" class="table table-bordered table datatable responsive ">
                             <!-- A TABELA SERÁ INSERIDA AQUI-->
-                        </table>                       
+                        </table>  
+                        <br>
+                        <h2 style="display:none;" id="buyMsg">Produtos selecionados</h2>
+                        <h2>
+                        <input type="hidden" name="identificador" id="identificador" value="">
+                        <table  id="compras" style="display:none;"  class="table table-bordered table datatable responsive ">
+                        <thead> 
+                            <tr>
+                            <th><button class="btn btn-danger" id="removerAll">remove todos</button></th>
+                                <th>Código do produto</th>
+                                <th>Produto</th>
+                                <th> Quantidade </th>
+                                <th> Valor unitário </th>
+                            </tr>
+                        </thead>
+                            <tbody id="add_Produtos">
+                       
+                            </tbody>
+                                                     
+                        </table>
                     
                     </div>
 
@@ -74,21 +93,21 @@
 
 
    //Carrega tabela com todos os usuários
-    $(document).ready(function() {
-        $.ajax({
-            url: "{{ route('vendas.tabela') }}",
-            type: 'GET',
-            data: {},
-            beforeSend: function() {
-                $('#tabela').html("<div class='row'><div class='col-md-12 text-center'><div class='col-md-12'><img src='{{asset('imagens/loading_circular.gif')}}' style='width: 30px'></div>Carregando</div></div>");
-                //$('#tabela').html("<div class='text-center'>Carregando...</div>");
-            },
-            success: function(data) {
-                data ='';
-                $('#tabela').html(data);
-            }
-        });
-    });
+    // $(document).ready(function() {
+    //     $.ajax({
+    //         url: "{{ route('vendas.tabela') }}",
+    //         type: 'GET',
+    //         data: {},
+    //         beforeSend: function() {
+    //             $('#tabela').html("<div class='row'><div class='col-md-12 text-center'><div class='col-md-12'><img src='{{asset('imagens/loading_circular.gif')}}' style='width: 30px'></div>Carregando</div></div>");
+    //             //$('#tabela').html("<div class='text-center'>Carregando...</div>");
+    //         },
+    //         success: function(data) {
+    //             data ='';
+    //             $('#tabela').html(data);
+    //         }
+    //     });
+    // });
 
 
     jQuery(function($){
@@ -98,7 +117,7 @@
     });
     
 
-    // $('#pesquisar').click(function() {   
+    $('#pesquisar').click(function() {   
          
     //      var rec_matricula = $('#rec_matricula').val();
     //      var rec_cpf = $('#rec_cpf').val();
@@ -109,7 +128,7 @@
            
     //         $.ajax({
                  
-    //              url: "{{ route('pesquisar.recad_suprev.tabela') }}",
+    //              url: "{{ route('pesquisar.vendas.tabela') }}",
     //              type: 'GET',
     //              data: {
     //              r_matricula : rec_matricula,
@@ -132,9 +151,30 @@
     //         $('._validator').html("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'></button>  <strong>Error: </strong> Preencha algum dos campos para pesquisar! </div>");
     //      } 
          
-        
-                
+    var rec_codigo_prod = $("#rec_codigo_prod").val();
+    var rec_nome_prod = $("#rec_nome_prod").val();
+    if(rec_codigo_prod !="" || rec_nome_prod != ""){
+    $.ajax({
+                url: "{{ route('pesquisar.vendas.tabela') }}",
+                type: 'GET',
+                data: {            
+                    rec_codigo_prods : rec_codigo_prod,
+                    rec_nome_prods : rec_nome_prod   
+                },
+                beforeSend: function() {
+                    $('#tabela').html("<div class='row'><div class='col-md-12 text-center'><div class='col-md-12'><img src='{{asset('imagens/loading_circular.gif')}}' style='width: 30px'></div>Carregando</div></div>");
+                    $('#tabela').html("<div class='text-center'>Carregando...</div>");
+                    
+                },
+                success: function(data) {                    
+                    $('#tabela').html(data);
+                    
+                },
             
+             
+            });
+                
+        }
      });
     
 

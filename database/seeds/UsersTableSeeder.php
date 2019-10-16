@@ -12,19 +12,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        DB::table('users')->insert([
-            'name' => 'Administrador',
-            'email' => 'suporte@saeb.ba.gov.br',
-            'password' => bcrypt('suporte'),
-            'cpf' => '111.111.111-11',
-            'matricula' => '111111111',
-            'funcao' => 'Administrador',
-            'telefone' => '(00) 00000-0000',
-            'ativo' => 'S',
-             'updated_at' => Carbon::now(),
-        ]);
-=======
         DB::table('users')->insert(
             [
                 [
@@ -42,6 +29,5 @@ class UsersTableSeeder extends Seeder
 
             ]   
     );
->>>>>>> 3ad796ac2d54eef20d796a8111f1a3abfaf0a38d
     }
 }

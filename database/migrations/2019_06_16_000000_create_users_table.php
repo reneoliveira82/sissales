@@ -15,17 +15,16 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_sac_unidade')->unsigned();
+            $table->foreign('id_sac_unidade')->references('id')->on('sac_unidades')->onUpdate('cascade');
+            $table->integer('id_funcao')->unsigned()->nullable();
+            $table->foreign('id_funcao')->references('id')->on('funcaos')->onUpdate('cascade');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->default(Hash::make('123456'));
             $table->string('cpf', 15);
             $table->string('matricula', 15);
-            $table->string('funcao', 60);
             $table->string('telefone', 15);
-            // $table->integer('id_orgao')->unsigned()->nullable();
-            // $table->foreign('id_orgao')->references('id')->on('orgaos')->onUpdate('cascade');
-            // $table->integer('id_vinculo_empregaticio')->unsigned()->nullable();
-            // $table->foreign('id_vinculo_empregaticio')->references('id')->on('vinculo_empregaticios')->onUpdate('cascade');
             $table->enum('solicita_conta', ['S','N','A'])->nullable();
             $table->enum('ativo', ['S','N'])->default('N');
             $table->rememberToken();

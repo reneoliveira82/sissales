@@ -10,7 +10,8 @@ class Produtos extends Model
         'id',
         'cod_produto',
         'nome_produto',
-        'qtd_produto'
+        'qtd_produto',
+        'preco_unit'
 
     ];
 }

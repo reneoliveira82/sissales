@@ -4,7 +4,7 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Valor</th>
-            <th>Quantidade</th          
+            <th>Quantidade</th>          
         </tr>
     </thead>
     <tbody>  

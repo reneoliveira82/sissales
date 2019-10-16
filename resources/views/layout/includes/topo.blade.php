@@ -48,7 +48,7 @@
     <link href="{{asset('metronic/assets/layouts/layout4/css/themes/default.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
     <link href="{{asset('metronic/assets/layouts/layout4/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
-
+    <script src="../assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
     <!--Meu estilo CSS-->
     <link href="{{asset('metronic/modelo/estilo.css')}}" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="{{asset('imagens/favicon-16x16.png')}}" />

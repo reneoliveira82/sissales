@@ -18,6 +18,7 @@ class Produto extends Migration
             $table->string('cod_produto')->nullable();
             $table->string('nome_produto')->nullable();
             $table->string('qtd_produto')->nullable();
+            $table->string('preco_unit')->nullable();
             $table->timestamps();
         });
     }

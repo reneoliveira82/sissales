@@ -1,5 +1,5 @@
 @extends('layout.default')
-@section('titulo','Relatório de Inativos | Sistema Gestão de Recadastramento')
+@section('titulo','Relatório de Desligados | Sistema Gestão de Recadastramento')
 @section('conteudo')
 
 <div class="page-content-wrapper">
@@ -8,8 +8,11 @@
 
     <div class="page-head">
         <div class="page-title">
-            <h1>Usuário</h1>
+            <h1>Relatório</h1>
         </div>
+    </div>
+    <div class="date_validator">
+
     </div>
     @if(session('msg')){!! session('msg')} @endif
     <div class="row">
@@ -19,12 +22,11 @@
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="icon-settings font-green"></i>
-                            <span class="caption-subject font-green bold uppercase">Lista de Relatório de Inativos</span>
+                            <span class="caption-subject font-green bold uppercase">Relatório de Desligados</span>
                         </div>
 
                     </div>
-                    <div class="portlet-body">
-                   
+                    <div class="portlet-body">                  
                   
                         
  
@@ -42,24 +44,19 @@
                                         <label for="data_final" class="">Data final:</label>
                                         <input type="text" class="form-control"  id="data_final" name="data_final" placeholder="" value="">
                                     </div><!-- FIM DO FORMGROUP -->
-                                </div><!-- Fim do Col -->
-
+                                </div><!-- Fim do Col -->                               
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <br>
+                                        <button class="btn btn-primary" id="pesquisar">Pesquisar</button>
+                                    </div><!-- FIM DO FORMGROUP -->
+                                </div><!-- Fim do Col -->                               
                             </div><!-- Fim do Row-->
-                        <div id="tabela">
+                            <br>
+                        <table id="tabela" class="table table-bordered table datatable responsive ">
                             <!-- A TABELA SERÁ INSERIDA AQUI-->
-                        </div>
-
-                        @can('create_user')
-                        <div class="row ">
-                            <div class="col-md-12 ">
-                                <div class="form-actions">
-                                    <button type="button" class="btn blue" id="novo"> <i class="fa fa-plus"></i> Novo</button>
-
-                                </div>
-                            </div>
-                        </div>                            
-                        @endcan
-
+                        </table>
+                        
                     </div>
 
                 </div>
@@ -75,21 +72,70 @@
     //Carrega tabela com todas as secretariass
     $(document).ready(function() {
         $.ajax({
+            
             url: "{{ route('rel_inativos.tabela') }}",
             type: 'GET',
             data: {},
             beforeSend: function() {
                 $('#tabela').html("<div class='row'><div class='col-md-12 text-center'><div class='col-md-12'><img src='{{asset('imagens/loading_circular.gif')}}' style='width: 30px'></div>Carregando</div></div>");
                 //$('#tabela').html("<div class='text-center'>Carregando...</div>");
+                
             },
             success: function(data) {
                 $('#tabela').html(data);
-            }
+                
+            },
+            
+            
         });
+       
     });
+
+    
     jQuery(function($){
      $("#data_inicial").mask("99/99/9999");
      $("#data_final").mask("99/99/9999");
+    });
+
+    
+
+    $('#pesquisar').click(function() {        
+        var data_inicial = $('#data_inicial').val();
+        var data_final = $('#data_final').val();
+
+        if (data_inicial =="" && data_final ==""){      
+            $('.date_validator').html("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'></button>  <strong>Error: </strong> Informe um periodo! </div>");              
+                     
+            }else if(data_inicial !="" && data_final =="" || data_inicial =="" && data_final !=""){
+             
+                $('.date_validator').html("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'></button>  <strong>Error: </strong> Informe os dois periodos! </div>");    
+            }else{
+                $('.date_validator').html('');
+                $.ajax({
+                
+                url: "{{ route('pesquisar.rel_inativos.tabela') }}",
+                type: 'GET',
+                data: {
+                dt_inicial : data_inicial,
+                dt_final : data_final
+                },
+                beforeSend: function() {
+                    $('#tabela').html("<div class='row'><div class='col-md-12 text-center'><div class='col-md-12'><img src='{{asset('imagens/loading_circular.gif')}}' style='width: 30px'></div>Carregando</div></div>");
+                    //$('#tabela').html("<div class='text-center'>Carregando...</div>");
+                    
+                },
+                success: function(data) {                    
+                    $('#tabela').html(data);
+                    
+                },
+                
+                
+                });
+            }
+        
+       
+           
+           
     });
     </script>
 @endsection()

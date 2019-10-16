@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Models\PerfilAcesso;
 use App\Models\PerfilUser;
+use App\Models\Sac_tipo_unidade;
+use App\Models\Sac_unidade;
+use App\Models\Funcao;
 
 class UserController extends Controller
 {
@@ -56,14 +59,19 @@ class UserController extends Controller
 
 
         $perfil_acesso = PerfilAcesso::orderBy('nome')->get();
+        $unidade_sac = Sac_unidade::all();
+        $tipo_unidade_sac = Sac_tipo_unidade::all();
+        $funcoes = Funcao::all();
+
         if ($id == null) {
-            return view("view.$this->pag.cad_usuario", compact('perfil_acesso'));
+            return view("view.$this->pag.cad_usuario", compact('perfil_acesso','unidade_sac','tipo_unidade_sac', 'funcoes'));
         } else {
+           
             $registros = $this->model::find($id);
             $perfil_user = PerfilUser::join('perfil_acessos', 'perfil_acessos.id', '=', 'perfil_users.perfil_acesso_id')->select('perfil_users.id as pu_id', 'perfil_acessos.*')->where('perfil_users.user_id', '=', $id)->orderBy('perfil_acessos.nome')->get();
             if ($registros) {
                 $pagina = ($acao == 'aprovacao') ? 'usuario_aprovar_cad' : 'cad_usuario';
-                return view("view.$this->pag.$pagina", compact('registros', 'perfil_acesso', 'perfil_user', 'acao'));
+                return view("view.$this->pag.$pagina", compact('registros', 'perfil_acesso', 'perfil_user', 'acao','unidade_sac','tipo_unidade_sac','funcoes'));
             } else {
                 return redirect()->route('usuario.index');
             }
@@ -72,6 +80,7 @@ class UserController extends Controller
 
     public function insertUser(Request $req)
     {
+       
         if ($this->checkUserActive() ==  false){
             return redirect()->route('login');
         }
@@ -80,7 +89,7 @@ class UserController extends Controller
             return redirect()->back();
             
         try {
-            $dados = $req->all();
+            $dados = $req->all();            
             if ($lastId = $this->model->create($dados)) {
                 $registros = $this->model->find($lastId->id);
                 return redirect()->route('usuario.cad', compact('registros'))->with('msg', $this->mensagem(1, 'O registro do Usuário foi salvo!'));
@@ -95,13 +104,14 @@ class UserController extends Controller
 
     public function updateUsuario(Request $req, $id)
     {
+       
         if ($this->checkUserActive() ==  false){
             return redirect()->route('login');
         }
 
         if ($this->checkPermission($this->edit_permission))
             return redirect()->back()->with('msg', $this->mensagem(2, 'Você não tem permissão para completar esta ação!'));
-
+             
         try {
             $dados = $req->all();
             $dados['ativo'] = isset($dados['ativo']) ? 'S' : 'N';

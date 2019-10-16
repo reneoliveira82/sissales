@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);">
         <div class="container">
             <div class="navbar-brand row" style="font-size: 20px">
-                {{ __('Carta de Serviço') }}
+                {{ __('Gestão de Recadastramento') }}
             </div>
 
             <div class="row">

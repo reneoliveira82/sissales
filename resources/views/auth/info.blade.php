@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);">
         <div class="container">
             <div class="navbar-brand row" style="font-size: 20px">
-                {{ __('Carta de Serviço') }}
+                {{ __('Gestão de Recadastramento') }}
             </div>
 
             <!-- Right Side Of Navbar -->
@@ -35,7 +35,7 @@
         
             <div class="col-md-12 alert alert-success text-center" role="alert">
                 Criação de conta solicitada com sucesso! <br>
-                Aguarde a aprovação do gestor da carta.
+                Aguarde a aprovação do Administrador do Sistema.
             </div>            
 
             <div class="row  mb-0" style="padding-top: 15px">

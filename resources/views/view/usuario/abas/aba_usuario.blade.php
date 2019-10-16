@@ -73,16 +73,43 @@
 
 
     <div class="row">
-        <div class="col-sm-6 ">
-            <div class="form-group">
-                <label for="funcao" class="control-label">Função</label>
-                <input required type="text" class="form-control" name="funcao" id="funcao" value="{{ isset($registros->funcao) ? $registros->funcao : '' }}" autocomplete="of">
+        <div class="col-sm-5 ">
+            <div class="form-group">               
+                <div class="input-group select2-bootstrap-prepend">                           
+                    <label for="id_funcao">Função</label>
+                    <select id="id_funcao" name="id_funcao"   class="form-control select2"  > 
+                        <option  value=""> --Selecione--</option>  
+
+                        @foreach ($funcoes as $rows_funcoes)
+                   
+                        <option  value="{{$rows_funcoes->id}}" {{ isset($registros->id_funcao) && $registros->id_funcao == $rows_funcoes->id ? "selected" : ""}}> {{ $rows_funcoes->desc_funcao }}</option> 
+                        @endforeach
+                      
+                    </select>
+                </div><!-- FIM DO FORMGROUP -->             
             </div>
 
         </div>
 
          
     </div>
+    <div class="row">          
+        <div class="col-sm-5 ">         
+                <div class="input-group select2-bootstrap-prepend">  
+                         
+                    <label for="id_sac_unidade"> Unidade</label>
+                    <select id="id_sac_unidade" name="id_sac_unidade"   class="form-control select2"  > 
+                        <option  value=""> --Selecione--</option>  
+
+                        @foreach ($unidade_sac as $rows_unidade_sac)
+                   
+                        <option  value="{{$rows_unidade_sac->id}}" {{ isset($registros->id_sac_unidade) && $registros->id_sac_unidade == $rows_unidade_sac->id ? "selected" : ""}}> {{ $rows_unidade_sac->unid_descricao }}</option> 
+                        @endforeach
+                      
+                    </select>
+                </div><!-- FIM DO FORMGROUP -->
+            </div> 
+        </div>
 
     <div class="form-body">
 

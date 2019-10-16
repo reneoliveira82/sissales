@@ -19,6 +19,7 @@ class Venda extends Migration
             $table->string('nome_cliente');
             $table->string('produto');
             $table->string('tipo_venda');
+            $table->string('total_pg');
             $table->timestamps();
         });
     }

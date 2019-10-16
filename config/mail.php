@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'nao_responda@saeb.ba.gob.br'),
-        'name' => env('MAIL_FROM_NAME', 'Carta de Serviço'),
+        'name' => env('MAIL_FROM_NAME', 'Sistema Gestão de Recadastramento'),
     ],
 
     /*

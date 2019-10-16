@@ -25,19 +25,19 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->registerPolicies();
+        $this->registerPolicies();
 
-        // $permissions = Permissao::with('perfilAcessos')->get();
-        // //dd($permissions);
-        // foreach ($permissions as $p){
-        //     Gate::define($p->nome, function(User $user) use ($p){
-        //         return $user->verificaPermissao($p);
-        //     });
-        // }
+        $permissions = Permissao::with('perfilAcessos')->get();
+        //dd($permissions);
+        foreach ($permissions as $p){
+            Gate::define($p->nome, function(User $user) use ($p){
+                return $user->verificaPermissao($p);
+            });
+        }
 
-        // Gate::before(function(User $user){
-        //     if($user->verificaPerfil('Administrador'))
-        //         return true;
-        // });
+        Gate::before(function(User $user){
+            if($user->verificaPerfil('Administrador'))
+                return true;
+        });
     }
 }

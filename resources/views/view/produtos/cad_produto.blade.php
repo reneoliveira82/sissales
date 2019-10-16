@@ -69,6 +69,15 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                    <div class="col-sm-2 ">
+                                            <div class="form-group">
+                                                <label for="preco_unit" class="control-label">Valor Unitário:</label>
+                                                <input required type="text" class="form-control" name="preco_unit" id="preco_unit" value="{{ isset($registros->preco_unit) ? $registros->preco_unit : '' }}" maxlength="100" autocomplete="of">
+                                                <!--<div class="help-block with-errors"></div>-->
+                                            </div>
+                                        </div>
+                                    </div>
                                 
                                     <div class="form-body">
                                 

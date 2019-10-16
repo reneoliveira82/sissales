@@ -14,7 +14,38 @@ class PermissaoTableSeeder extends Seeder
     {
         DB::table('permissaos')->insert(
             [
-               
+                ##################Função##################
+                [
+                    'nome' => 'view_funcao',
+                    'descricao' => 'Visualizar',
+                    'grupo' => 'Função',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+
+                [
+                    'nome' => 'create_funcao',
+                    'descricao' => 'Cadastrar',
+                    'grupo' => 'Função',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+
+                [
+                    'nome' => 'edit_funcao',
+                    'descricao' => 'Editar',
+                    'grupo' => 'Função',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+
+                [
+                    'nome' => 'delete_funcao',
+                    'descricao' => 'Deletar',
+                    'grupo' => 'Função',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
                 ##################PERFIL DE ACESSO##################
                 [
                     'nome' => 'view_perfil_acesso',
@@ -114,79 +145,62 @@ class PermissaoTableSeeder extends Seeder
                     'updated_at' => Carbon::now(),
                 ],
 
-                // ##################ATRIBUIR USUÁRIO AO SERVIÇO##################
-                // [
-                //     'nome' => 'view_user_service',
-                //     'descricao' => 'Visualizar',
-                //     'grupo' => 'Atribuir_Usuário_ao_Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
+                // ##################  RECADASTRAMENTO ##################
+                [
+                    'nome' => 'view_recadastramento',
+                    'descricao' => 'Visualizar',
+                    'grupo' => 'Recadastramento',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],       
 
-                // [
-                //     'nome' => 'create_user_service',
-                //     'descricao' => 'Atribuir',
-                //     'grupo' => 'Atribuir_Usuário_ao_Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
+                [
+                    'nome' => 'edit_recadastramento',
+                    'descricao' => 'Editar',
+                    'grupo' => 'Recadastramento',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
 
-                // ##################SERVIÇO##################
-                // [
-                //     'nome' => 'view_servico',
-                //     'descricao' => 'Visualizar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
+                 // ################## RELATÓRIO RECADASTRAMENTO ##################
 
-                // [
-                //     'nome' => 'create_servico',
-                //     'descricao' => 'Cadastrar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
+                 [
+                    'nome' => 'view_relatorio_recadastramento',
+                    'descricao' => 'Visualizar',
+                    'grupo' => 'Relatorio_Recadastramento',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ], 
+                // ################## SAC UNIDADE ##################  
+                [
+                    'nome' => 'view_sac_unidade',
+                    'descricao' => 'Visualizar',
+                    'grupo' => 'Sac_Unidade',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+                [
+                    'nome' => 'create_sac_unidade',
+                    'descricao' => 'Cadastrar',
+                    'grupo' => 'Sac_Unidade',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+                [
+                    'nome' => 'edit_sac_unidade',
+                    'descricao' => 'Editar',
+                    'grupo' => 'Sac_Unidade',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
 
-                // [
-                //     'nome' => 'edit_servico',
-                //     'descricao' => 'Editar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
-
-                // [
-                //     'nome' => 'delete_servico',
-                //     'descricao' => 'Deletar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
-
-                // [
-                //     'nome' => 'end_servico',
-                //     'descricao' => 'Finalizar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
-
-                // [
-                //     'nome' => 'validate_servico',
-                //     'descricao' => 'Validar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
-
-                // [
-                //     'nome' => 'publish_servico',
-                //     'descricao' => 'Publicar',
-                //     'grupo' => 'Serviço',
-                //     'created_at' => Carbon::now(),
-                //     'updated_at' => Carbon::now(),
-                // ],
+                [
+                    'nome' => 'delete_sac_unidade',
+                    'descricao' => 'Deletar',
+                    'grupo' => 'Sac_Unidade',
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
             ]
         );
     }

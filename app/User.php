@@ -19,12 +19,13 @@ class User extends Authenticatable
     protected $fillable = [
        
             'id',
+            'id_sac_unidade',
+            'id_funcao',    
             'name',
             'email',
             'password',
             'cpf',
             'matricula',
-            'funcao',
             'telefone',
             'solicita_conta',
             'ativo'
